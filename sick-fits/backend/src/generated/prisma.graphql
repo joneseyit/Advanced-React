@@ -1,4 +1,4 @@
-# source: https://us1.prisma.sh/wesbos/sick-fits/dev
+  # source: https://us1.prisma.sh/wesbos/sick-fits/dev
 # timestamp: Fri May 25 2018 10:46:45 GMT-0400 (EDT)
 
 type AggregateCartItem {
@@ -311,7 +311,6 @@ input ItemCreateInput {
   image: String
   largeImage: String
   price: Int!
-  user: UserCreateOneInput!
 }
 
 input ItemCreateOneInput {
