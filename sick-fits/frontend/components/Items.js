@@ -34,7 +34,6 @@ class Items extends Component {
         return (
             <div>
                 <Center>
-                    <p>Items</p>
                     <Query query={ALL_ITEMS_QUERY} > 
                         {({data, error, loading}) => {
                             if(loading) return <p>Loading...</p>
@@ -52,3 +51,4 @@ class Items extends Component {
 }
 
 export default Items;
+export { ALL_ITEMS_QUERY };
