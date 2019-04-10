@@ -11,7 +11,6 @@ const Mutations = {
         return item;
     },
     updateItem(parent, args, ctx, info) {
-        debugger
         //first take a copy of updates
         const updates = { ...args };
         delete updates.id;
@@ -23,6 +22,19 @@ const Mutations = {
             },
 
          }, info)
+    },
+    async deleteItem(parent, args, ctx, info) {
+        //wanna make a 'where' var 
+        const where = { id: args.id };
+        //find the item
+                                          //right here we are passing in raw graphql and it will parse it for us
+        // const item = await ctx.db.item({ where }, `{id title}`)
+        //check if they own the item or have the permissions
+        // TODO
+        //delete it
+        return ctx.db.mutation.deleteItem({ where }, info)
+        //query the item first to check and see if the person owns it or if they have permission to delete it
+                  
     }
 };
 
