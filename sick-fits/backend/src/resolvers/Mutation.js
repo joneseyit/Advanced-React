@@ -28,7 +28,7 @@ const Mutations = {
         const where = { id: args.id };
         //find the item
                                           //right here we are passing in raw graphql and it will parse it for us
-        // const item = await ctx.db.item({ where }, `{id title}`)
+        // const item = await cptx.db.item({ where }, `{id title}`)
         //check if they own the item or have the permissions
         // TODO
         //delete it
